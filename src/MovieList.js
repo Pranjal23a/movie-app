@@ -8,6 +8,7 @@ class MovieList extends Component {
         this.state = {
             movies: [
                 {
+                    id: 1,
                     title: 'The Avengers',
                     plot: 'Supernatural powers shown in the movie.',
                     poster: "https://shorturl.at/eFGOR",
@@ -18,6 +19,7 @@ class MovieList extends Component {
                     cart: false,
                 },
                 {
+                    id: 2,
                     title: 'Gadar 2',
                     plot: 'India-Pakistan Border Story',
                     poster: "https://shorturl.at/dilTY",
@@ -28,6 +30,7 @@ class MovieList extends Component {
                     cart: false,
                 },
                 {
+                    id: 3,
                     title: 'Rocky aur Rani ki prem kahani',
                     plot: 'Some moral stories shown in movie.',
                     poster: "https://shorturl.at/cipqP",
@@ -87,7 +90,7 @@ class MovieList extends Component {
         return (
             <>
                 {movies.map((movie) => <MoviCard movies={movie} addStars={this.addStars}
-                    decStars={this.decStars} handleFav={this.handleFav} handleCart={this.handleCart} />)}
+                    decStars={this.decStars} handleFav={this.handleFav} handleCart={this.handleCart} key={movie.id} />)}
 
             </>
         )
